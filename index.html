@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div class="TimerDiv">
+        <h3 class="TimerText"> ZAMANLAYICI </h3>
+        <h1 id="TimerTime" class="TimerTime"> 00 : 25 : 00 </h1>
+    </div>
+    <br>
+    <div class="StartButtonDiv">
+        <button class="StartTimerButton" id="StartTimerButton"> BAŞLAT </button>
+        <button class="StopTimerButton" id="StopTimerButton" onclick="stopTimer()"> DURDUR </button>
+    </div>
+    <br>
+    <div class="TimeSelectionParentDiv">
+        <div class="TimeSelectionDiv">
+            <h4 class="WorkingTimeSelectionText"> ÇALIŞMA ZAMANI SEÇİN</h4>
+            <form class="WorkingTimeSelectionForm">
+                <label for="whour">Saat:</label>
+                <input type="number" id="whour" , name="whour" , value="00" , min="00" , max="23">
+                <label for="wminute">Dakika:</label>
+                <input type="number" id="wminute" , name="wminute" , value="25" , min="00" , max="59">
+                <label for="wsecond">Saniye:</label>
+                <input type="number" id="wsecond" , name="wsecond" , value="00" , min="00" , max="59">
+            </form>
+            <br>
+            <h4 class="BreakTimeSelectionText"> MOLA ZAMANI SEÇİN</h4>
+            <form class="BreakTimeSelectionForm">
+                <label for="bhour">Saat:</label>
+                <input type="number" id="bhour" , name="bhour" , value="00" , min="00" , max="23">
+                <label for="bminute">Dakika:</label>
+                <input type="number" id="bminute" , name="bminute" , value="05" , min="00" , max="59">
+                <label for="bsecond">Saniye:</label>
+                <input type="number" id="bsecond" , name="bsecond" , value="00" , min="00" , max="59">
+            </form>
+            <br>
+            <h4 class="LoopCountText"> TUR SAYISI SEÇİMİ </h4>
+            <form class="LoopCounterForm">
+                <label for="loopCount">Tur:</label>
+                <input type="number" id="loopCount" name="loopCount" , value="4" , min="0">
+            </form>
+        </div>
+        <div class="TimeSelectionDiv">
+            <h4 class="PuanText">PUAN</h3>
+            <h2 class="Puan">25</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

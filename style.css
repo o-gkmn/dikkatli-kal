@@ -1,0 +1,144 @@
+body {
+    /* background-image: linear-gradient(to right, #f2709c, #ff9472); */
+    background-image: linear-gradient(to right, #134E5E, #71B280);
+    /* background-image: linear-gradient(to right, #5C258D, #4389A2); */
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+/*div*/
+div.TimerDiv {
+    margin: auto;
+    width: 50%;
+    border: 2px dashed black;
+    background-color: antiquewhite;
+}
+
+div.StartButtonDiv {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.TimeSelectionParentDiv {
+    display: flex;
+}
+
+div.TimeSelectionDiv {
+    width: 80%;
+    padding-left: 10%;
+    float: left;
+}
+
+/*h*/
+h4.WorkingTimeSelectionText {
+    color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: start;
+}
+
+h4.BreakTimeSelectionText {
+    color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: start;
+}
+
+h4.LoopCountText {
+    color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: start;
+}
+
+h4.PuanText {
+    color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: start;
+}
+
+h3.TimerText {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+}
+
+h2.Puan {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 65px;
+    font-weight: bold;
+    text-align: start;
+    /* color: #FFFF00; */
+    color: #71DAD3
+}
+
+h1.TimerTime {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 75px;
+    font-weight: bold;
+    text-align: center;
+    color: grey;
+}
+
+/*form*/
+Form.WorkingTimeSelectionForm {
+    color: dimgrey;
+    font-weight: bold;
+}
+
+Form.BreakTimeSelectionForm {
+    color: dimgrey;
+    font-weight: bold;
+}
+
+Form.LoopCounterForm {
+    color: dimgrey;
+    font-weight: bold;
+}
+
+/*input[type=number]*/
+input[type=number],
+select {
+    height: 36px;
+    width: 8%;
+    background-color: #EAD9D7;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/*button*/
+button.StartTimerButton {
+    background-color: #A5F490;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    padding: 20px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 12px;
+}
+
+button.StopTimerButton {
+    background-color: #BA1B1D;
+    color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
+}
