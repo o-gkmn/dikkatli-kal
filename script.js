@@ -1,6 +1,8 @@
 var startTimerButton = document.getElementById("StartTimerButton");
+var stopTimerButton = document.getElementById("StopTimerButton");
 
 var timertime = document.getElementById("TimerTime");
+var puanText = document.getElementById("Puan");
 
 var whour = document.getElementById("whour");
 var wminute = document.getElementById("wminute");
@@ -16,6 +18,7 @@ var flag = false;
 var workingFlag = true;
 var turnCount = parseInt(loopCount.value);
 var decreasedTurnCount = parseInt(loopCount.value);
+var puan = 0;
 
 var duehour = parseInt(whour.value);
 var dueminute = parseInt(wminute.value);
@@ -64,7 +67,9 @@ function isTurnsCompleted() {
     console.log("turncount" + turnCount);
     console.log("decreasedTurnCount" + decreasedTurnCount);
     if (decreasedTurnCount == 0) {
-        alert("başarılı");
+        alert("TUR SAYINI TAMAMLADIN +50");
+        puan += 50;
+        puanText.innerHTML = puan;
     }
 }
 
@@ -80,6 +85,8 @@ function stopTimer() {
     flag = true;
 }
 
+stopTimerButton.addEventListener("click", () => puan-=10);
+
 startTimerButton.addEventListener("click", () => {
     var interval = setInterval(timer, 1000);
     function timer() {
@@ -90,6 +97,7 @@ startTimerButton.addEventListener("click", () => {
             clearInterval(interval);
             isBreakTimeOrWorkingTime();
             decreasedTurnCount -= 0.5;
+            puan += 50/(turnCount*2);
             isTurnsCompleted();
             return;
         }
@@ -106,13 +114,47 @@ startTimerButton.addEventListener("click", () => {
     }
 });
 
-whour.addEventListener("change", () => setBreakTimeOrWorkingTime());
-wminute.addEventListener("change", () => setBreakTimeOrWorkingTime());
-wsecond.addEventListener("change", () => setBreakTimeOrWorkingTime());
-bhour.addEventListener("change", () => setBreakTimeOrWorkingTime());
-bminute.addEventListener("change", () => setBreakTimeOrWorkingTime());
-bsecond.addEventListener("change", () => setBreakTimeOrWorkingTime());
-loopCount.addEventListener("change", () => { 
+
+whour.addEventListener("change", () => {
+    if(decreasedTurnCount != turnCount){
+        puan -= 10;
+    }
+    setBreakTimeOrWorkingTime();
+});
+wminute.addEventListener("change", () => {
+    if(decreasedTurnCount != turnCount){
+        puan -= 10;
+    }
+    setBreakTimeOrWorkingTime();
+});
+wsecond.addEventListener("change", () => {
+    if(decreasedTurnCount != turnCount){
+        puan -= 10;
+    }
+    setBreakTimeOrWorkingTime();
+});
+bhour.addEventListener("change", () => {
+    if(decreasedTurnCount != turnCount){
+        puan -= 10;
+    }
+    setBreakTimeOrWorkingTime();
+});
+bminute.addEventListener("change", () => {
+    if(decreasedTurnCount != turnCount){
+        puan -= 10;
+    }
+    setBreakTimeOrWorkingTime();
+});
+bsecond.addEventListener("change", () => {
+    if(decreasedTurnCount != turnCount){
+        puan -= 10;
+    }
+    setBreakTimeOrWorkingTime();
+});
+loopCount.addEventListener("change", () => {
+    if(decreasedTurnCount != turnCount){
+        puan -= 10;
+    }
     decreasedTurnCount = parseInt(loopCount.value) - (turnCount - decreasedTurnCount) 
     turnCount = parseInt(loopCount.value);
 });
