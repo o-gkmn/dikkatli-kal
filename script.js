@@ -1,3 +1,17 @@
+/*
+    #  #                                #  #
+
+
+##########  #########  ##########  ##       ##  ###########
+##########	########   ##########  ##       ##  ##       ##
+##	    ##       ##    ##          ##       ##  ##       ##
+##	    ##      ##     ##   #####  ##       ##  ###########
+##	    ##     ##      ##   #####  ##       ##  ####
+##	    ##    ##       ##      ##  ##       ##  ##  ##
+##########   ########  ##########  ###########  ##   ##
+##########  #########  ##########  ###########  ##     ######################
+*/
+
 var startTimerButton = document.getElementById("StartTimerButton");
 var stopTimerButton = document.getElementById("StopTimerButton");
 
@@ -64,8 +78,6 @@ function setBreakTimeOrWorkingTime() {
 }
 
 function isTurnsCompleted() {
-    console.log("turncount" + turnCount);
-    console.log("decreasedTurnCount" + decreasedTurnCount);
     if (decreasedTurnCount == 0) {
         alert("TUR SAYINI TAMAMLADIN +50");
         puan += 50;
